@@ -1,7 +1,6 @@
 /*
   name: Adrien Protzel
- email: protzela@oregonstate.edu
- https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
+  email: protzela@oregonstate.edu
 */
 
 var path = require('path');
@@ -18,8 +17,19 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+var title;
+var des;
+
 app.get('/', function (req, res, next) {
-  res.status(200).render('homePage', {postAll: postData});
+  title = "Proelian";
+  des = "Advanced Energy Technologies";
+  res.status(200).render('homePage', {title: title, des: des});
+});
+
+app.get('/contacts', function (req, res, next) {
+  title = "Contacts";
+  des = "Contact Us";
+  res.status(200).render('homePage', {title: title, des: des});
 });
 
 app.get('/posts/:item', function (req, res, next) {
@@ -33,7 +43,9 @@ app.get('/posts/:item', function (req, res, next) {
 });
 
 app.get('*', function (req, res, next) {
-  res.status(404).render('404');
+  title = "404";
+  des = "Woops! We couldn't find that page.";
+  res.status(404).render('404', {title: title, des: des});
 });
 
 app.listen(port, function () {

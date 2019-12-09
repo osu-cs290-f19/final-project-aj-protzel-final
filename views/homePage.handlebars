@@ -1,154 +1,106 @@
-<main class="content">
-  {{#if postAll}}
-  <aside class="filter-container">
+<main class="home-page">
+<!--
+  <section id="home-posts">
 
-    <h2>Filters</h2>
+    <div class="home-post">
+      <div class="home-post-content">
+        <div class="post-title">
+          <h1 id="post-title">AdVances</h1>
+          <h3 id="post-time">date • name</h3>
+        </div>
 
-    <div class="filter-input-container">
-      <label for="filter-text" class="filter-input-label">Text</label>
-      <div class="filter-input-element">
-        <input type="text" name="filter-text" id="filter-text" class="filter-input">
+        <div class="post-body">
+          <p>Welcome to ProVance Technologies. Here you will find our latest publicly released updates. Hydrogen Pulse Detonation Pump As of August 9th, 2019 our patent application to the USPTO was filed and the receipt is posted below. U.S. Provisional Patent Application Filing Hydrogen Pulse Detonation Combustion Pump First Named Inventor: Vance Turner Our Ref: T11-05956.PRO</p>
+        </div>
+
+        <button type="button" id="read-more"></button>
       </div>
     </div>
 
-    <div class="filter-input-container">
-      <label for="filter-min-price" class="filter-input-label">Price</label>
-      <div class="filter-input-element">
-        <input type="text" name="filter-min-price" id="filter-min-price" class="filter-input" placeholder="min">
-      </div>
-      <div class="filter-input-element">
-        <input type="text" name="filter-max-price" id="filter-max-price" class="filter-input" placeholder="max">
-      </div>
-    </div>
-
-    <div class="filter-input-container">
-      <label for="filter-city">City</label>
-      <div class="filter-input-element">
-        <select id="filter-city" class="filter-input" name="filter-city">
-          <option selected value="">Any</option>
-          <option>Corvallis</option>
-          <option>Albany</option>
-          <option>Eugene</option>
-          <option>Portland</option>
-          <option>Salem</option>
-          <option>Bend</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="filter-input-container">
-      <fieldset id="filter-condition" class="filter-fieldset">
-        <legend>Condition</legend>
-        <div>
-          <input type="checkbox" name="filter-condition" id="filter-condition-new" value="new">
-          <label for="filter-condition-new">New</label>
-        </div>
-        <div>
-          <input type="checkbox" name="filter-condition" id="filter-condition-excellent" value="excellent">
-          <label for="filter-condition-excellent">Excellent</label>
-        </div>
-        <div>
-          <input type="checkbox" name="filter-condition" id="filter-condition-good" value="good">
-          <label for="filter-condition-good">Good</label>
-        </div>
-        <div>
-          <input type="checkbox" name="filter-condition" id="filter-condition-fair" value="fair">
-          <label for="filter-condition-fair">Fair</label>
-        </div>
-        <div>
-          <input type="checkbox" name="filter-condition" id="filter-condition-poor" value="poor">
-          <label for="filter-condition-poor">Poor</label>
-        </div>
-      </fieldset>
-    </div>
-
-    <button id="filter-update-button" class="action-button">Update</button>
-  </aside>
-
-  <section id="posts">
-      {{#each postAll}}
-        {{> post}}
-      {{/each}}
   </section>
+-->
 
-  {{/if}}
+<section id="posts">
 
-  {{#if posts}}
-    <section id="posts">
-        {{#with posts}}
-          {{> post}}
-        {{/with}}
-    </section>
-  {{/if}}
+        <div class="post" data-price="500" data-city="Eugene" data-condition="poor">
+          <div class="post-contents">
+            <div class="post-image-container">
+            </div>
+            <div class="post-info-container">
+              <a href="#" class="post-title">Super nice laptop</a> <span class="post-price">$500</span> <span class="post-city">(Eugene)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post" data-price="20" data-city="Corvallis" data-condition="excellent">
+          <div class="post-contents">
+            <div class="post-image-container">
+            </div>
+            <div class="post-info-container">
+              <a href="#" class="post-title">Platypus Trophy</a> <span class="post-price">$20</span> <span class="post-city">(Corvallis)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post" data-price="100" data-city="Portland" data-condition="new">
+          <div class="post-contents">
+            <div class="post-image-container">
+            </div>
+            <div class="post-info-container">
+              <a href="#" class="post-title">Very large pile of interesting donuts</a> <span class="post-price">$100</span> <span class="post-city">(Portland)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post" data-price="250" data-city="Salem" data-condition="fair">
+          <div class="post-contents">
+            <div class="post-image-container">
+            </div>
+            <div class="post-info-container">
+              <a href="#" class="post-title">Oregon laws</a> <span class="post-price">$250</span> <span class="post-city">(Salem)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post" data-price="1" data-city="Bend" data-condition="new">
+          <div class="post-contents">
+            <div class="post-image-container">
+            </div>
+            <div class="post-info-container">
+              <a href="#" class="post-title">Sunshine</a> <span class="post-price">$1</span> <span class="post-city">(Bend)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post" data-price="99" data-city="Portland" data-condition="fair">
+          <div class="post-contents">
+            <div class="post-image-container">
+            </div>
+            <div class="post-info-container">
+              <a href="#" class="post-title">Hipsters</a> <span class="post-price">$99</span> <span class="post-city">(Portland)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post" data-price="20000000" data-city="Eugene" data-condition="good">
+          <div class="post-contents">
+            <div class="post-image-container">
+            </div>
+            <div class="post-info-container">
+              <a href="#" class="post-title">Football stadium (we kind of want to build a new one)</a> <span class="post-price">$20000000</span> <span class="post-city">(Eugene)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post" data-price="10000" data-city="Corvallis" data-condition="excellent">
+          <div class="post-contents">
+            <div class="post-image-container">
+            </div>
+            <div class="post-info-container">
+              <a href="#" class="post-title">Very nice farmer's market</a> <span class="post-price">$10000</span> <span class="post-city">(Corvallis)</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
 </main>
-
-{{#if postAll}}
-<button type="button" id="sell-something-button"><i class="fas fa-plus"></i></button>
-
-<div id="modal-backdrop" class="hidden"></div>
-<div id="sell-something-modal" class="hidden">
-  <div class="modal-dialog">
-
-    <div class="modal-header">
-      <h3>Sell something on Benny's List</h3>
-      <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
-    </div>
-
-    <div class="modal-body">
-
-      <div class="post-input-element">
-        <label for="post-text-input">Item description</label>
-        <input type="text" id="post-text-input"></input>
-      </div>
-
-      <div class="post-input-element">
-        <label for="post-photo-input">Photo URL</label>
-        <input type="text" id="post-photo-input">
-      </div>
-
-      <div class="post-input-element">
-        <label for="post-price-input">Selling price ($)</label>
-        <input type="number" id="post-price-input">
-      </div>
-
-      <div class="post-input-element">
-        <label for="post-city-input">City</label>
-        <input type="text" id="post-city-input">
-      </div>
-
-      <div class="post-input-element">
-        <fieldset id="post-condition-fieldset" class="post-fieldset">
-          <legend>Condition</legend>
-          <div>
-            <input type="radio" name="post-condition" id="post-condition-new" value="new" checked>
-            <label for="post-condition-new">New</label>
-          </div>
-          <div>
-            <input type="radio" name="post-condition" id="post-condition-excellent" value="excellent">
-            <label for="post-condition-excellent">Excellent</label>
-          </div>
-          <div>
-            <input type="radio" name="post-condition" id="post-condition-good" value="good">
-            <label for="post-condition-good">Good</label>
-          </div>
-          <div>
-            <input type="radio" name="post-condition" id="post-condition-fair" value="fair">
-            <label for="post-condition-fair">Fair</label>
-          </div>
-          <div>
-            <input type="radio" name="post-condition" id="post-condition-poor" value="poor">
-            <label for="post-condition-poor">Poor</label>
-          </div>
-        </fieldset>
-      </div>
-
-    </div>
-
-    <div class="modal-footer">
-      <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
-      <button type="button" id="modal-accept" class="action-button">Create Post</button>
-    </div>
-
-  </div>
-</div>
-{{/if}}

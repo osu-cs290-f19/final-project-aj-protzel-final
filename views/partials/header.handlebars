@@ -1,7 +1,28 @@
-<header>
-  <div class="header-image-container">
-    <img src="/benny.jpg" alt="Benny logo">
-  </div>
+<!--
+  Adrien Protzel
+  protzela@oregonstate.edu
+-->
 
-  <h1 class="site-title"><a href="#">Benny's List</a></h1>
+<header>
+  <img class="header-image" src="/header.jpeg" alt="Header image">
+
+  <h1 id="site-title">Proelian</h1>
+
+  <div class="header-title-container">
+    <h1 id="page-title">{{title}}</h1>
+    <h3 id="page-des">{{des}}</h3>
+  </div>
 </header>
+
+<button type="button" id="nav-button" class="fa fa-bars fa-times"></button>
+
+<div id="modal-backdrop" class="hidden"></div>
+
+<div id="nav-modal" class="hidden">
+  <nav class="nav-list">
+    <ul class="navlist">
+      <li><a href="/">Home</a></li>
+      <li><a href="/contacts">Contacts</a></li>
+    </ul>
+  </nav>
+</div>
