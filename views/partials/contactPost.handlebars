@@ -1,20 +1,12 @@
 
-<div class="home-post" data-title="{{title}}" data-time="{{date}} • {{name}}">
-  <div class="home-post-contents">
-    <h1 id="home-post-title">{{title}}</h1>
-    <h3 id="home-post-time">{{date}} • {{name}}</h3>
-    <div class="home-post-info-container">
-      <p id="home-post-info">{{content}}</p>
-    </div>
-    <a class="read-more-button" href="/contacts">READ MORE</a>
+<div class="contact-post">
+  <div class="contact-post-contents">
+    <ul class="contactlist">
+      <li style="list-style-type: none;" id="contact-name">{{name}}</li>
+      <li id="contact-title">{{title}}</li>
+      <li id="contact-address">{{address}}</li>
+      <li id="contact-phone">Phone: {{phone}}</li>
+      <li id="contact-email">Email: {{email}}</li>
+    </ul>
   </div>
 </div>
-
-
-<!--
-"name": "Adrien Protzel",
-"title": "Web Developer",
-"address": "99 El Dorado Rd.",
-"phone": "408-781-5302",
-"email": "protzela@oregonstate.edu"
--->
