@@ -167,7 +167,7 @@ header{
 }
 
 #home-post-title{
-  margin: 5px;
+  margin: 0;
   font-size: 30px;
   font-weight: 700;
 }
@@ -271,4 +271,19 @@ header{
   text-align: center;
   font-size: 20px;
   font-weight: 700;
+}
+
+/*------------------------------------------------------------Footer*/
+footer{
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+#site-footer{
+  text-align: center;
+  color: #7c7c7c;
+  margin: auto;
+  font-size: 15px;
 }
