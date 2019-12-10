@@ -35,6 +35,19 @@ app.get('/contacts', function (req, res, next) {
   });
 });
 
+app.get('/readmore/:n', function (req, res, next) {
+  var n = req.params.n.toLowerCase();
+  if (homePostData[n]) {
+    res.status(200).render('readMorePage', {
+      pageTitle: homePostData[n].snipit,
+      pageDes: homePostData[n].date + " • " + homePostData[n].name,
+      page: homePostData[n]
+    });
+  } else {
+    next();
+  }
+});
+
 app.get('*', function (req, res, next) {
   res.status(404).render('404', {
     pageTitle: "404",
